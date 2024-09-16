@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'inventory/css/userprofile.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../../static/inventory/images/logo.png" alt="Capybara Logo">
+        </div>
+    </header>
+
+    <div class="profile-container">
+        <div class="profile-card">
+            <div class="profile-photo">
+                <img src="../../static/inventory/images/user-photo.png" alt="Profile Photo">
+            </div>
+            <div class="profile-info">
+                <p>Correo electrónico: <span class="info" id="email">ingenocla@gmail.com</span> <a class="update" onclick="editField('email')">Actualizar</a></p>
+                <div class="input-edit" id="edit-email">
+                    <input type="text" id="email-input" value="ingenocla@gmail.com">
+                    <button onclick="saveField('email')">Guardar</button>
+                </div>
+                <p>Nombre de usuario: <span class="info" id="username">El_Inge_</span> <a class="update" onclick="editField('username')">Actualizar</a></p>
+                <div class="input-edit" id="edit-username">
+                    <input type="text" id="username-input" value="El_Inge_">
+                    <button onclick="saveField('username')">Guardar</button>
+                </div>
+                <p>Fecha de nacimiento: <span class="info" id="dob">20/11/1996</span> <a class="update" onclick="editField('dob')">Actualizar</a></p>
+                <div class="input-edit" id="edit-dob">
+                    <input type="text" id="dob-input" value="20/11/1996">
+                    <button onclick="saveField('dob')">Guardar</button>
+                </div>
+                <p>Teléfono: <span class="info" id="phone">3184477726</span> <a class="update" onclick="editField('phone')">Actualizar</a></p>
+                <div class="input-edit" id="edit-phone">
+                    <input type="text" id="phone-input" value="3184477726">
+                    <button onclick="saveField('phone')">Guardar</button>
+                </div>
+                <p>Contraseña: <span class="info" id="password">*****</span> <a class="update" onclick="editField('password')">Actualizar</a></p>
+                <div class="input-edit" id="edit-password">
+                    <input type="password" id="password-input" value="*****">
+                    <button onclick="saveField('password')">Guardar</button>
+                </div>
+            </div>
+            <a href="workarea.html"><button class="back-button">Regresar</button></a>
+        </div>
+    </div>
+
+    <script src="JS/userprofile.js"></script>
+</body>
+</html>

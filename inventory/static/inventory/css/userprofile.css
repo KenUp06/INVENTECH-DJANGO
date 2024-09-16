@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.profile-card {
+    background-color: #ff9999; /* Tonalidad roja */
+    border-radius: 15px;
+    padding: 40px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.profile-photo img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+}
+
+.profile-info {
+    margin-top: 30px;
+}
+
+.profile-info p {
+    margin: 20px 0; /* Ajuste del espaciado */
+}
+
+.info {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.update {
+    margin-left: 10px;
+    color: #3498db; /* Color del botón de actualización */
+    text-decoration: none;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.update:hover {
+    text-decoration: underline;
+}
+
+.back-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.back-button:hover {
+    background-color: #c0392b;
+}
+
+.input-edit {
+    display: none;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.input-edit input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-edit button {
+    margin-top: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input-edit button:hover {
+    background-color: #2980b9;
+}

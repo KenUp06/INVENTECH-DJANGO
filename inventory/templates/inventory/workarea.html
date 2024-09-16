@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de trabajo</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'inventory/css/workarea.css' %}">
+    <link rel="stylesheet" href="../../static/CSS/global-styles.css">
+</head>
+<body>
+    <header> 
+        <div id="profile-photo"> <a href="userprofile.html"> <img src="Photos/user-photo.png" alt="profile photo"> </a></div>
+        <ul id="header-options">
+            <li><a href="#" id="createInventoryLink">Crear Inventario</a></li>
+            <li><a href="#" id="renameInventoryLink">Renombrar Inventario</a></li>
+            <li><a href="#" id="removeInventoryLink">Remover Inventario</a></li>
+            <li><a href="#" id="invoiceBankLink">Banco de Facturas</a></li>
+            <li><a href="../index.html" id="logoutLink">Cerrar Sesión</a></li>
+        </ul>
+    </header>
+
+    <main id="inventoryList">
+        <!-- Aquí van los inventarios que se irán creando -->
+    </main>
+
+    <!-- Ventanas modales -->
+    <div id="Create-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Crear inventario</h2>
+            <form id="createInventoryForm">
+                <p>Ingresa el nombre del inventario</p>
+                <input type="text" id="newInventoryName" required>
+                <button type="submit">Crear</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="Rename-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Renombrar inventario</h2>
+            <form id="renameInventoryForm">
+                <p>Ingresa el nombre actual del inventario</p>
+                <input type="text" id="currentInventoryName" required>
+                <p>Ingresa el nuevo nombre del inventario</p>
+                <input type="text" id="newInventoryNameRename" required>
+                <button type="submit">Renombrar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="Delete-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Eliminar inventario</h2>
+            <form id="deleteInventoryForm">
+                <p>Ingresa el nombre del inventario</p>
+                <input type="text" id="inventoryNameToDelete" required>
+                <button type="submit">Eliminar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="JS/workareamodal.js"></script>
+</body>
+</html>

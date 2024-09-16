@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'inventory/css/index-global.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Inventarios</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+                <li><a href="{% url 'about' %}">Acerca de</a></li>
+                <li><a href="{% url 'contactus' %}">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="main-content">
+            <h2>Contáctanos</h2>
+            <p>Si tienes alguna pregunta o necesitas asistencia, no dudes en ponerte en contacto con nosotros. Estamos aquí para ayudarte.</p>
+            <form id="contactForm">
+                <input type="text" id="name" name="name" placeholder="Tu Nombre" required><br>
+                <input type="email" id="email" name="email" placeholder="Tu Correo Electrónico" required><br>
+                <textarea id="message" name="message" placeholder="Tu Mensaje" required></textarea><br>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Inventarios. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Mensaje enviado. ¡Gracias por contactarnos!');
+            document.getElementById('contactForm').reset();
+        });
+    </script>
+</body>
+</html>

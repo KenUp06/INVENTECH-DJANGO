@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'inventory/css/index-global.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Inventarios</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+                <li><a href="{% url 'about' %}">Acerca de</a></li>
+                <li><a href="{% url 'contactus' %}">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="main-content">
+            <h2>Acerca de Nosotros</h2>
+            <p>Bienvenido a Inventarios, la solución definitiva para la gestión de tus inventarios. Nuestro objetivo es proporcionar una herramienta fácil de usar y eficiente para ayudarte a administrar tus productos y recursos de manera efectiva.</p>
+            <h3>Nuestra Misión</h3>
+            <p>Ofrecer un software de gestión de inventarios que simplifique los procesos y aumente la productividad de nuestros usuarios.</p>
+            <h3>Visión</h3>
+            <p>Convertirnos en el líder del mercado en soluciones de gestión de inventarios a nivel global, brindando innovaciones constantes y un excelente servicio al cliente.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Inventarios. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

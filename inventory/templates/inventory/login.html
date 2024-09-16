@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'inventory/css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'inventory/css/global-styles.css' %}">
+</head>
+<body>
+    <img id="logo" src="Photos/logo.png" alt="logo.png">
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <!-- <form action="/login" method="post">-->
+            <label for="username">Correo electronico</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" required>
+            
+            <a href="workarea.html"><button type="submit">Ingresar</button></a>
+        </form>
+    </div>
+</body>
+</html>

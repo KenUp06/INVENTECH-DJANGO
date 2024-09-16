@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'inventory/css/inventary.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>INVENTARIO</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ICONO</th>
+                    <th>NOMBRE</th>
+                    <th>CANTIDAD</th>
+                    <th>PRECIO UNITARIO</th>
+                    <th>PRECIO TOTAL</th>
+                    <th>ACCIONES</th>
+                </tr>
+            </thead>
+            <tbody id="inventory">
+                <!-- Filas del inventario se añadirán aquí -->
+            </tbody>
+        </table>
+        <button id="addSlotButton">Agregar nuevo slot</button>
+        <a href="inventarygestion.html"><button id="settingsButton">Configuraciones de Inventario</button></a>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-title">Agregar nueva fruta</h2>
+            <form id="addItemForm">
+                <input type="hidden" id="editIndex">
+                <label for="icon">Icono (URL):</label>
+                <input type="text" id="icon" name="icon" required><br><br>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="quantity">Cantidad:</label>
+                <input type="number" id="quantity" name="quantity" required><br><br>
+                <label for="unitPrice">Precio Unitario:</label>
+                <input type="number" id="unitPrice" name="unitPrice" required><br><br>
+                <button type="submit" id="submitButton">Agregar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="JS/inventary.js"></script>
+</body>
+</html>
